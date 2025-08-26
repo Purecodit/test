@@ -1,0 +1,217 @@
+---
+layout: default
+title: Referral - Care By Nurse
+permalink: /referral/
+description: Refer a new participant or client for NDIS services and support coordination.
+---
+<section class="site-section referral-form-section">
+        <div class="site-wrapper">
+            <div class="site-row justify-center">
+                <div class="site-col col-12"> <!-- Changed to col-12 to make the form take full width on smaller screens, will be limited by max-width of .referral-form -->
+                    <div class="referral-form">
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="85f2564b-6d0d-4272-a17e-ecb201011c74">
+                            <input type="hidden" name="subject" value="New Referral Form Submission">
+
+                            <h3 class="text-center">Referrer Details</h3>
+                            <div class="form-group">
+                                <label for="referrer_name">Your Full Name</label>
+                                <input type="text" id="referrer_name" name="Referrer Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="referrer_email">Your Email Address</label>
+                                <input type="email" id="referrer_email" name="Referrer Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="referrer_phone">Your Phone Number</label>
+                                <input type="tel" id="referrer_phone" name="Referrer Phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="referrer_organisation">Your Organisation (Optional)</label>
+                                <input type="text" id="referrer_organisation" name="Referrer Organisation">
+                            </div>
+
+                            <h3 class="text-center">Participant Details</h3>
+                            <div class="form-group">
+                                <label for="participant_name">Participant's Full Name</label>
+                                <input type="text" id="participant_name" name="Participant Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ndis_number">Participant's client Number (Optional)</label> <!-- Kept here as it's a specific identifier -->
+                                <input type="text" id="ndis_number" name="Participant NDIS Number">
+                            </div>
+                            <div class="form-group">
+                                <label for="participant_dob">Participant's Date of Birth</label>
+                                <input type="date" id="participant_dob" name="Participant Date of Birth">
+                            </div>
+                            <div class="form-group">
+                                <label for="participant_address">Participant's Address</label>
+                                <input type="text" id="participant_address" name="Participant Address">
+                            </div>
+                            <div class="form-group">
+                                <label for="participant_phone">Participant's Phone Number (Optional)</label>
+                                <input type="tel" id="participant_phone" name="Participant Phone">
+                            </div>
+                             <div class="form-group">
+                                <label for="participant_email">Participant's Email (Optional)</label>
+                                <input type="email" id="participant_email" name="Participant Email">
+                            </div>
+
+                            <h3 class="text-center">Service Requirements</h3>
+                            <div class="form-group">
+                                <label for="services_interest">Which services is the participant interested in?</label>
+                                <select id="services_interest" name="Services Interest" multiple size="5">
+                                    <option value="Support Coordination">Nursing Support</option>
+                                    <option value="Supported Independent Living">Supported Independent Living (SIL)</option>
+                                    <option value="Community Participation">Community Participation</option>
+                                    <option value="Therapeutic Supports">Therapeutic Supports</option>
+                                    <option value="Daily Living Assistance">Daily Living Assistance</option>
+                                    <option value="Respite Care">Respite Care</option>
+                                    <option value="Other">Other (Please specify below)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="services_required">Please describe the specific needs and services required</label>
+                                <textarea id="services_required" name="Specific Services Required" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="additional_info">Any additional information or special considerations?</label>
+                                <textarea id="additional_info" name="Additional Information"></textarea>
+                            </div>
+
+                            <div class="form-group text-center">
+                                <button type="submit" class="site-btn darkblue-bg">Submit Referral</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	 <style>
+        /* Custom styles for the referral form to make it modern and attractive */
+        .referral-form-section {
+            background-color: #f8f8f8;
+            padding: 80px 0;
+        }
+
+        .referral-form {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .referral-form h3 {
+            font-size: 28px;
+            color: #0F2E5F;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #F04405;
+            padding-bottom: 15px;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+        }
+
+        .referral-form .form-group {
+            margin-bottom: 25px;
+        }
+
+        .referral-form label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 17px;
+        }
+
+        .referral-form input[type="text"],
+        .referral-form input[type="email"],
+        .referral-form input[type="tel"],
+        .referral-form input[type="date"],
+        .referral-form textarea,
+        .referral-form select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #555;
+            transition: all 0.3s ease;
+            box-sizing: border-box; /* Ensures padding doesn't add to the width */
+        }
+
+        .referral-form input[type="text"]:focus,
+        .referral-form input[type="email"]:focus,
+        .referral-form input[type="tel"]:focus,
+        .referral-form input[type="date"]:focus,
+        .referral-form textarea:focus,
+        .referral-form select:focus {
+            border-color: #F04405;
+            box-shadow: 0 0 8px rgba(240, 68, 5, 0.2);
+            outline: none;
+        }
+
+        .referral-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .referral-form .site-btn {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 0;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            background-color: #0F2E5F; /* Dark blue as per your site's button style */
+            color: #fff;
+            border: none;
+        }
+
+        .referral-form .site-btn:hover {
+            background-color: #F04405; /* Orange on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(240, 68, 5, 0.3);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .referral-form-section {
+                padding: 50px 0;
+            }
+            .referral-form {
+                padding: 30px 20px;
+                margin: 0 20px;
+            }
+            .referral-form h3 {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referral-form h3 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+            .referral-form label {
+                font-size: 15px;
+            }
+            .referral-form input,
+            .referral-form textarea,
+            .referral-form select {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+            .referral-form .site-btn {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+        }
+    </style>

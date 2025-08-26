@@ -1,0 +1,64 @@
+# ---
+# Site Settings
+# ---
+# General configuration for your Jekyll site.
+# You can access these values in your templates like this: {{ site.title }}
+
+title: Care By Nurse
+email: info@carebynurse.com
+description: >- # Using >- allows for multi-line descriptions
+  Offering specialist support coordination, SIL, and therapeutic services.
+baseurl: "" # The subpath of your site, e.g., /blog. Leave empty if hosted at the root.
+url: "" # The base hostname & protocol for your site, e.g., https://www.example.com.
+
+# ---
+# Author & Designer Info
+# ---
+# Information from your site's footer.
+
+author: Gagandeep Singh
+designer_email: Gagandeep@engineer.com
+
+# ---
+# Contact & Social Media
+# ---
+# Storing these here makes them easy to manage and update across the site.
+
+contact_info:
+  phone: 1300 112 233
+  address: "Epping, Melbourne, VIC 3064"
+
+social:
+  facebook: your-facebook-url
+  instagram: your-instagram-url
+  linkedin: your-linkedin-url
+
+# ---
+# Build Settings
+# ---
+# These settings configure the Jekyll build process.
+
+markdown: kramdown
+permalink: pretty # Makes URLs cleaner (e.g., /about/ instead of /about.html)
+
+# You are using custom CSS, so a theme might not be necessary.
+# If you want to use a theme, you can uncomment the following line:
+# theme: minima
+
+plugins:
+  - jekyll-feed    # Creates an Atom feed for your posts
+  - jekyll-seo-tag # Adds metadata tags for better SEO
+
+# ---
+# Excluded Items
+# ---
+# These files and folders will be excluded from the build process.
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - README.md
